@@ -24,7 +24,11 @@ from etl_util import (
 if __name__ == "__main__":
     # config arg parser
     parser = argparse.ArgumentParser()
-    parser.add_argument("--test", help="execute a test run to print out result without saving to database", action="store_true")
+    parser.add_argument(
+        "--test",
+        help="execute a test run to print out result without saving to database",
+        action="store_true",
+    )
     args = parser.parse_args()
 
     # config logging

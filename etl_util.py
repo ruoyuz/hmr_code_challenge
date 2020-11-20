@@ -35,7 +35,9 @@ def check_dict_duplicates(pairs) -> OrderedDict:
     return res_dict
 
 
-def validate_subscription(subscription: ItunesSubscription, field_validation_set: set):
+def validate_subscription(
+    subscription: ItunesSubscription, field_validation_set: set
+) -> bool:
     """Validate data format (transactions) in a subscription."""
     id = subscription.id
     transactions = subscription.transactions
@@ -48,6 +50,8 @@ def validate_subscription(subscription: ItunesSubscription, field_validation_set
     for tx in transactions:
         if set(tx.keys()) != field_validation_set:
             raise ValueError("Invalid transaction found in subscription: id=%s" % (id,))
+
+    return True
 
 
 def read_subscription_file(filename: str) -> List[ItunesSubscription]:
