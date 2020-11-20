@@ -4,7 +4,7 @@ A Code challenge for a data task.
 The goal is to process a data file in json format, extract some field information, calculate metadata, and persist the outcome in a PostgreSQL database. To serve this purpose, components for the Python processing script are created:
 
 1. `models.py` as the object relational mapping for data model in the table
-2. `etl_utl.py` as the utility library for the workflow
+2. `etl_util.py` as the utility library for the workflow
 3. `config.py` as the store for configuration items
 4. `test.py` as the unit test set for utility functions
 5. `entry.py` as the entry point to contain the business logic
